@@ -11,7 +11,7 @@
     </style>
 <!--顶部导航条-->
     <style name="top">
-        <item name="android:background">#fff</item>
+        <item name="android:background">#21ADEC</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:layout_gravity">center</item>
