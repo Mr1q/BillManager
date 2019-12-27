@@ -1,6 +1,5 @@
 package com.example.hp.billmanger;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,11 +7,12 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.hp.billmanger.Activity.Login;
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 
 import java.io.IOException;
 
+import com.example.hp.billmanger.Utils.HttpUtill;
 import okhttp3.Call;
 import okhttp3.Response;
 

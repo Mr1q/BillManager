@@ -21,19 +21,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.hp.billmanger.Activity.MainActivity"
             android:screenOrientation="portrait">
             <!--支持竖屏操作-->
 
         </activity>
         <activity
-            android:name=".Login"
+            android:name="com.example.hp.billmanger.Activity.Login"
             android:label="记账本"
             android:screenOrientation="portrait">
 
         </activity>
         <activity
-            android:name=".Register"
+            android:name="com.example.hp.billmanger.Activity.Register"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Begin_paper"

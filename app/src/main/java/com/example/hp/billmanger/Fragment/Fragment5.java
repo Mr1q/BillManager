@@ -1,9 +1,8 @@
-package Fragment;
+package com.example.hp.billmanger.Fragment;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Handler;
-import android.os.IBinder;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.hp.billmanger.Input;
@@ -29,11 +29,8 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
-import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,7 +38,6 @@ import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.b.V;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
@@ -181,15 +177,16 @@ private  BarData data;
             riqi.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Calendar calendar = Calendar.getInstance();
-                    new MyPickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                            String text = "你选择了" + year + "年" + (month + 1) + "月";  //月份从0开始计数
-                            Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
-                            riqi.setText(year + "-" + (month + 1));
-                        }
-                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+//                    Calendar calendar = Calendar.getInstance();
+//                    new MyPickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+//                        @Override
+//                        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//                            String text = "你选择了" + year + "年" + (month + 1) + "月";  //月份从0开始计数
+//                            Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
+//                            riqi.setText(year + "-" + (month + 1));
+//                        }
+//                    }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+                    Gettime();
                 }
             });
 
@@ -315,7 +312,28 @@ private  BarData data;
         return view;
 
     }
+    public void Gettime() {
+        final StringBuilder stringBuilder = new StringBuilder();
+        final Calendar calendar = Calendar.getInstance();
+        new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                stringBuilder.append(hourOfDay + ":" + minute);
+                riqi.setText(stringBuilder);
+            }
+        }, calendar.get(Calendar.HOUR), calendar.get(Calendar.MINUTE), true).show();
 
+        new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String text = "你选择了" + year + "年" + (month + 1) + "月" + dayOfMonth + "日";  //月份从0开始计数
+                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+
+                stringBuilder.append(year + "-" + (month + 1) + "-" + dayOfMonth + " ");
+            }
+        }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+
+    }
     private void Out() {
 
         if(riqi.getText().toString().equals("日期"))

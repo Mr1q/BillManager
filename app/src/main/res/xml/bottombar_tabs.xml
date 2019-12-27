@@ -2,20 +2,26 @@
 <tabs xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <tab xmlns:app="http://schemas.android.com/apk/res-auto"
+    <tab
         id="@+id/tab_main"
-        icon="@drawable/ic_content_paste"
+        icon="@mipmap/zhang"
+        inActiveColor="#090909"
+        activeColor="#298CDA"
         title="账单明细"/>
         <!--barColorWhenSelected="#CDBA96" -->
     <tab
         id="@+id/tab_graph"
-        icon="@drawable/ic_content_paste"
+        icon="@mipmap/zhu"
+        inActiveColor="#090909"
+        activeColor="#298CDA"
         title="柱状图"/>
         <!--barColorWhenSelected="#FF8C69" />-->
 
     <tab
         id="@+id/qita"
-        icon="@drawable/ic_image"
+        icon="@mipmap/common_item_bing"
+        inActiveColor="#090909"
+        activeColor="#298CDA"
         title="饼状图"        />
         <!--barColorWhenSelected="#5CACEE"-->
 

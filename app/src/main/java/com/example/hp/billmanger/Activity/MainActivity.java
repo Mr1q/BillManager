@@ -1,4 +1,4 @@
-package com.example.hp.billmanger;
+package com.example.hp.billmanger.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,6 +22,18 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.hp.billmanger.ActivityCollector;
+import com.example.hp.billmanger.BaseActivity;
+import com.example.hp.billmanger.CallBackvalue;
+import com.example.hp.billmanger.Fragment.Fragment3;
+import com.example.hp.billmanger.Fragment.Fragment4;
+import com.example.hp.billmanger.Fragment.Fragment5;
+import com.example.hp.billmanger.In_output;
+import com.example.hp.billmanger.Income;
+import com.example.hp.billmanger.Person;
+import com.example.hp.billmanger.R;
+import com.example.hp.billmanger.Search;
+import com.example.hp.billmanger.User_Message;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -34,7 +46,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 import static cn.bmob.v3.BmobUser.*;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener,CallBackvalue{
+public class MainActivity extends BaseActivity implements View.OnClickListener, CallBackvalue {
 
     private DrawerLayout mdrawerLayout;
     private List<Income> incomes=new ArrayList<>();
@@ -177,10 +189,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,C
             case android.R.id.home:
                 mdrawerLayout.openDrawer(GravityCompat.START);
                 break;
-            case R.id.over:ActivityCollector.finishAll();break;
+            case R.id.over:
+                ActivityCollector.finishAll();break;
 //            case R.id.More:break;
             case R.id.Search:
-                Intent intent1=new Intent(MainActivity.this,Search.class);
+                Intent intent1=new Intent(MainActivity.this, Search.class);
                 startActivity(intent1);
                 break;
             case R.id.deleteall:
@@ -188,7 +201,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,C
                 break;
             case R.id.back:
                 BmobUser.logOut();
-                Intent intent=new Intent(MainActivity.this,Login.class);
+                Intent intent=new Intent(MainActivity.this, Login.class);
                 startActivity(intent);
                 MainActivity.this.finish();
                 break;
@@ -212,7 +225,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener,C
             break;
             case R.id.actionbar:
 
-                Intent intent1=new Intent(MainActivity.this,In_output.class);
+                Intent intent1=new Intent(MainActivity.this, In_output.class);
                 startActivity(intent1);
                 MainActivity.this.finish();
                 break;

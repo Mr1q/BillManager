@@ -1,4 +1,4 @@
-                                   package com.example.hp.billmanger;
+                                   package com.example.hp.billmanger.Activity;
 
 //import android.app.ActionBar;
 import android.content.Context;
@@ -15,6 +15,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.hp.billmanger.BaseActivity;
+import com.example.hp.billmanger.Forget;
+import com.example.hp.billmanger.Person;
+import com.example.hp.billmanger.R;
+import com.example.hp.billmanger.Webview;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
@@ -138,7 +144,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                     Toast.makeText(Login.this,"网络中断，请检查网络设置",Toast.LENGTH_LONG).show();
                 break;
             case R.id.register:     //注册按钮
-                Intent intent=new Intent(Login.this,Register.class);   //跳转到主界面
+                Intent intent=new Intent(Login.this, Register.class);   //跳转到主界面
                 startActivity(intent);
                 finish();//销毁当前活动
                  break;
@@ -147,7 +153,7 @@ public class Login extends BaseActivity implements View.OnClickListener {
                 startActivity(intent1);
                 break;
             case R.id.forget_password:
-                Intent intent2=new Intent(Login.this,Forget.class);
+                Intent intent2=new Intent(Login.this, Forget.class);
                 startActivity(intent2);
                 break;
 

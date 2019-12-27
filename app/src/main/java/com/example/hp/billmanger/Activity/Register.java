@@ -1,4 +1,4 @@
-package com.example.hp.billmanger;
+package com.example.hp.billmanger.Activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.hp.billmanger.BaseActivity;
+import com.example.hp.billmanger.Person;
+import com.example.hp.billmanger.R;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
@@ -21,7 +23,7 @@ import cn.bmob.v3.listener.SaveListener;
 
 import static android.view.WindowManager.*;
 
-public class Register extends  BaseActivity implements View.OnClickListener{
+public class Register extends BaseActivity implements View.OnClickListener{
 
     private String Name;
     private  String mail;
@@ -63,7 +65,7 @@ public class Register extends  BaseActivity implements View.OnClickListener{
                 case R.id.Rbutton:
                     register();break;//注册方法
                 case R.id.Rreturn:
-                    Intent intent =new Intent(Register.this,Login.class);
+                    Intent intent =new Intent(Register.this, Login.class);
                     startActivity(intent);
                     Register.this.finish();
                     break;
