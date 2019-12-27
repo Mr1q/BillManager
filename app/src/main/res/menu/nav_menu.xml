@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="收入明细"
+            android:id="@+id/Message"
+            android:icon="@mipmap/img7"/>
+        <item
+            android:title="支出明细"
+            android:id="@+id/Message2"
+            android:icon="@mipmap/img7"/>
+        <!--<item-->
+            <!--android:icon="@mipmap/img7"-->
+            <!--android:title="个人信息"-->
+            <!--android:id="@+id/bill"/>-->
+
+    </group>
+
+
+
+
+
+</menu>

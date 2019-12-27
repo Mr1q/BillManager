@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hp.billmanger">
+
+    <uses-permission android:name="android.permission.INTERNET" />   <!-- 网络声明权限       !-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <!--支持竖屏操作-->
+
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="记账本"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Begin_paper"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Webview"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Forget"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".User_Message"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".In_output">
+
+        </activity>
+        <activity android:name=".Update">
+            <intent-filter>
+                <action android:name="com.example.activitiestr.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".Search"></activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+
+</manifest>

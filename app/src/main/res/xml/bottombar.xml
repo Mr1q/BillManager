@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab xmlns:app="http://schemas.android.com/apk/res-auto"
+        id="@+id/tab_in"
+        icon="@mipmap/ic8"
+        textsize="4dp"
+        title="收入"
+        />
+    <tab
+        id="@+id/tab_out"
+        icon="@mipmap/ic8"
+        title="支出"
+        textsize="4dp"
+      />
+</tabs>

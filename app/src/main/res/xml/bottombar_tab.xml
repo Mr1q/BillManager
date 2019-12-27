@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab xmlns:app="http://schemas.android.com/apk/res-auto"
+        id="@+id/tab_in"
+        icon="@drawable/ic_grid_on"
+        textsize="5dp"
+        title="收入"
+        barColorWhenSelected="#EE4000" />
+    <tab
+        id="@+id/tab_out"
+        icon="@drawable/ic_content_paste"
+        title="支出"
+        textsize="5dp"
+        barColorWhenSelected="#7B1FA2" />
+</tabs>
